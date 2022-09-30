@@ -10,7 +10,7 @@ let xMax = canvas.width-100, xMin = 100;
 let yMax = canvas.height-100, yMin = 100;
 
 let x = Math.round((Math.random() * (xMax - xMin) + xMin));
-let	y = Math.round((Math.random() * (yMax - yMin) + yMin));
+let y = Math.round((Math.random() * (yMax - yMin) + yMin));
 
 ctx.shadowBlur = 10;
 ctx.shadowOffsetX = 10;
