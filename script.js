@@ -64,8 +64,8 @@ function pavlov() {
 	}
 	else {
 		ctx.moveTo(x, y);
-	    ctx.lineTo(bx, by);
-	    ctx.lineTo(cx, cy);
+	    	ctx.lineTo(bx, by);
+	    	ctx.lineTo(cx, cy);
 		ctx.fill();
 		ctx.stroke();
 		ctx.beginPath();
