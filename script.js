@@ -16,14 +16,12 @@ ctx.shadowBlur = 10;
 ctx.shadowOffsetX = 10;
 ctx.shadowOffsetY = 10;
 
-let r, g, b;
 let bx, by, cx, cy;
 
-let pavlovXmax=0, pavlovYmax=0, pavlovXmin=0, pavlovYmin = 0;
-let reflexXmax = false, reflexYmax = false, reflexXmin = false, reflexYmin = false;
-let courseXmax = "shrink", courseXmin = "shrink", courseYmax = "shrink", courseYmin = "shrink";
-
 function draw() {
+	let r, g, b;
+	let rndbxby, rndcxcy;
+
 	r = Math.round(Math.random() * (255 - 20) + 20);
 	g = Math.round(Math.random() * (255 - 20) + 20);
 	b = Math.round(Math.random() * (255 - 20) + 20);
@@ -42,6 +40,10 @@ function draw() {
 
 
 function pavlov() {
+	let pavlovXmax=0, pavlovYmax=0, pavlovXmin=0, pavlovYmin = 0;
+	let reflexXmax = false, reflexYmax = false, reflexXmin = false, reflexYmin = false;
+	let courseXmax = "shrink", courseXmin = "shrink", courseYmax = "shrink", courseYmin = "shrink";
+
 	if (x>xMax+100) {
 		x-=radius/2;
 		pavlovXmax++;
@@ -137,12 +139,13 @@ function pavlov() {
 	}	
 }
 
-let rndIf;
 
 function update() {
 	ctx.clearRect(0,0,canvas.width,canvas.height);
 
 	draw();
+
+	let rndIf;
 
 	rndIf = Math.random() * (1.5 - 0.1) + 0.1;
 
